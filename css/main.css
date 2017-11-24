@@ -1,0 +1,13 @@
+#next {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    outline: none;
+}
+
+#mainInput {
+    box-shadow: 0px 0px 8px #888888;
+    border-radius: 4px;
+    font-size: 20px;
+
+}
