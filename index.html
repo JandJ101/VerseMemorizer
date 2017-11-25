@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/addVerse.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/animate.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="main" class="animated hide">
+
+            <h1 id="mainText"></h1>
+            <input type="text" id="mainInput" class="input-field" value="" onkeypress="nextSet();">
+
+            <input type="button" value="next" id="next" class="waves-effect waves-light btn blue-grey lighten-3" onclick="nextSet();">
+
+        </div>
+
+        <div id="addVerseContainer" class="animated">
+
+            <input type="text" id="addVerse" placeholder="Add New Verse" class="input-field" value="" onkeypress="">
+            
+            <input type="button" value="Go" id="triggerVerseAdd" class="waves-effect waves-light btn blue-grey lighten-3" onclick="changeVerse();">
+
+        </div>
+
+        <a class="btn-floating btn-large waves-effect waves-light blue-grey lighten-4 animated hide" id="add" title="Edit" onclick="changeUI();"><i class="material-icons">add</i></a>
+
+    </div>
+</body>
+
+</html>
