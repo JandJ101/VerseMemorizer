@@ -5,6 +5,7 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/addVerse.js"></script>
+    <script src="js/menu.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
@@ -15,26 +16,79 @@
 
 <body>
 
+
+
+    <ul id="slide-out" class="side-nav">
+        <div id="menuContainer" class="container">
+
+            <li>
+                <h1 class="blue-grey-text text-darken-1">Menu</h1>
+            </li>
+
+            <li>
+                <div class="switch">
+
+                    <label for="blurrText" onclick="unBlurrTextType();">Blurr Text</label><br>
+
+                    <label onclick="unBlurrTextType();">
+      Off    
+<input id="blurrText" type="checkbox">
+      <span class="lever"></span>
+      On
+    </label>
+                </div>
+
+            </li>
+
+            <li>
+
+
+                <label for="difdrop">Words Per Section</label><br>
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-button btn waves-effect waves-light' id="dificultyButton" href='#' data-activates='dropdown1'>?</a>
+
+                <!-- Dropdown Structure -->
+                <ul id='dropdown1' name="difdrop" class='dropdown-content'>
+                    <li><a onclick="setDificulty(1);">1</a></li>
+                    <li><a onclick="setDificulty(2);">2</a></li>
+                    <li><a onclick="setDificulty(3);">3</a></li>
+                    <li><a onclick="setDificulty(4);">4</a></li>
+
+                </ul>
+
+            </li>
+
+        </div>
+    </ul>
+    <a id="menuButton" href="#" data-activates="slide-out" class="button-collapse btn-floating btn-large waves-effect waves-light blue-grey lighten-3 animated hide"><i class="material-icons">menu</i></a>
+
+    <script>
+        $(".button-collapse").sideNav();
+
+    </script>
+
+
+
     <div class="container">
+
 
         <div id="main" class="animated hide">
 
-            <h1 id="mainText"></h1>
-            <input type="text" id="mainInput" class="input-field" value="" onkeypress="nextSet();">
+            <h1 id="mainText" style="" class="" onclick="unBlurrTextType();"></h1>
+            <input type="text" id="mainInput" class="input-field col s12" value="" onkeypress="blurrTextType();">
 
             <input type="button" value="next" id="next" class="waves-effect waves-light btn blue-grey lighten-3" onclick="nextSet();">
 
         </div>
-
         <div id="addVerseContainer" class="animated">
 
             <input type="text" id="addVerse" placeholder="Add New Verse" class="input-field" value="" onkeypress="">
-            
+
             <input type="button" value="Go" id="triggerVerseAdd" class="waves-effect waves-light btn blue-grey lighten-3" onclick="changeVerse();">
 
         </div>
 
-        <a class="btn-floating btn-large waves-effect waves-light blue-grey lighten-4 animated hide" id="add" title="Edit" onclick="changeUI();"><i class="material-icons">add</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light blue-grey lighten-3 animated hide" id="add" title="Edit" onclick="changeUI();"><i class="material-icons">edit</i></a>
 
     </div>
 </body>

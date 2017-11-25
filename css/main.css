@@ -11,7 +11,9 @@
     box-shadow: 0px 0px 8px #888888;
     border-radius: 4px;
     font-size: 20px;
-    padding: 10px;
+    width: 96%;
+    padding-right: 2%;
+    padding-left: 2%;
 }
 
 #add {
@@ -28,9 +30,52 @@
 
 .hide {
     visibility: collapse;
-    
+
 }
 
-#main{
-    position: absolute;
+#main {
+    /*position: absolute;
+    right: 10px;
+    left: 10px;
+    top: 10px;
+    */
+}
+
+#menuButton {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+#slide-out {
+    text-align: center;
+
+}
+
+#slide-out label {
+    font-size: 20px;
+    margin: 10px;
+
+}
+
+
+#menuContainer > li{
+    line-height: inherit;
+    padding: 15px;
+}
+
+.blurrText {
+    filter: blur(15px);
+    transition-duration: .2s;
+}
+
+.unBlurr {
+    filter: none;
+    transition-duration: .1s;
+}
+
+#dificultyButton{
+    margin: 0px;
+    padding: 0px;
+    
 }

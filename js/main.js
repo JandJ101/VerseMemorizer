@@ -68,24 +68,44 @@ var check = function () {
     }
 };
 
+
+//text blurr function
+var blurrTextType = function () {
+
+    if (document.getElementById("blurrText").checked == true) {
+        document.getElementById("mainText").classList.remove("unBlurr");
+        document.getElementById("mainText").classList.add("blurrText");
+    }
+
+};
+
+var unBlurrTextType = function () {
+        document.getElementById("mainText").classList.remove("blurrText");
+        document.getElementById("mainText").classList.add("unBlurr");
+    
+};
+
+
 var setState = 0;
 
 var nextSet = function () {
+    
+    unBlurrTextType();
 
-    if (document.getElementById("mainInput").value.replace(/\s/g,'').toLowerCase() == document.getElementById("mainText").innerHTML.replace(/\s/g,'').toLowerCase()) {
+    if (document.getElementById("mainInput").value.replace(/\s/g, '').toLowerCase() == document.getElementById("mainText").innerHTML.replace(/\s/g, '').toLowerCase()) {
 
         if (setState >= colectedWords.length) {
             setState = 0;
             document.getElementById("mainText").innerHTML = colectedWords[setState];
-            
+
             document.getElementById("mainInput").value = "";
-            
+
             setState++;
         } else {
             document.getElementById("mainText").innerHTML = colectedWords[setState];
-            
+
             document.getElementById("mainInput").value = "";
-            
+
             setState++;
         }
     }
@@ -97,4 +117,23 @@ window.onload = function () {
     document.getElementById("mainText").innerHTML = colectedWords[setState];
     setState++;
 
-}
+    $("#mainInput").keyup(function (event) {
+        if (event.keyCode === 13) {
+            $("#next").click();
+        }
+    });
+
+    $("#addVerse").keyup(function (event) {
+        if (event.keyCode === 13) {
+            $("#triggerVerseAdd").click();
+        }
+    });
+
+    $("#mainInput").keydown(function () {
+        blurrTextType();
+    });
+    
+    
+    document.getElementById("dificultyButton").innerHTML = dificulty;
+
+};
