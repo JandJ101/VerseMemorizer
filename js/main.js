@@ -80,16 +80,16 @@ var blurrTextType = function () {
 };
 
 var unBlurrTextType = function () {
-        document.getElementById("mainText").classList.remove("blurrText");
-        document.getElementById("mainText").classList.add("unBlurr");
-    
+    document.getElementById("mainText").classList.remove("blurrText");
+    document.getElementById("mainText").classList.add("unBlurr");
+
 };
 
 
 var setState = 0;
 
 var nextSet = function () {
-    
+
     unBlurrTextType();
 
     if (document.getElementById("mainInput").value.replace(/\s/g, '').toLowerCase() == document.getElementById("mainText").innerHTML.replace(/\s/g, '').toLowerCase()) {
@@ -108,11 +108,31 @@ var nextSet = function () {
 
             setState++;
         }
+    } else {
+
+        if (document.getElementById("mainInput").classList.contains("shake") == true) {
+
+            document.getElementById("mainInput").classList.toggle("shake");
+            
+            setTimeout(function () {
+                document.getElementById("mainInput").classList.add("shake")
+            }, 25);
+            
+
+        } else {
+
+            document.getElementById("mainInput").classList.add("shake");
+
+        }
+
     }
 
 }
 
 window.onload = function () {
+    
+    update();
+    
     makeArrayLooper();
     document.getElementById("mainText").innerHTML = colectedWords[setState];
     setState++;
@@ -132,8 +152,8 @@ window.onload = function () {
     $("#mainInput").keydown(function () {
         blurrTextType();
     });
-    
-    
+
+
     document.getElementById("dificultyButton").innerHTML = dificulty;
 
 };

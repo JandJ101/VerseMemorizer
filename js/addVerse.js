@@ -9,7 +9,7 @@ var changeVerse = function () {
 
 
 
-    //animations
+    ////animations
 
     //bring main in
     document.getElementById("main").classList.remove("hide");
@@ -28,6 +28,8 @@ var changeVerse = function () {
     document.getElementById("menuButton").classList.remove("hide");
     document.getElementById("menuButton").classList.remove("fadeOutLeft");
     document.getElementById("menuButton").classList.add("fadeInLeft");
+    
+ 
 
 };
 

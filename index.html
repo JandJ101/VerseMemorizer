@@ -6,6 +6,7 @@
     <script src="js/main.js"></script>
     <script src="js/addVerse.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/remeber.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
@@ -75,16 +76,29 @@
         <div id="main" class="animated hide">
 
             <h1 id="mainText" style="" class="" onclick="unBlurrTextType();"></h1>
-            <input type="text" id="mainInput" class="input-field col s12" value="" onkeypress="blurrTextType();">
+            <input type="text" id="mainInput" class="input-field col s12 animated" value="" onkeypress="blurrTextType();">
 
             <input type="button" value="next" id="next" class="waves-effect waves-light btn blue-grey lighten-3" onclick="nextSet();">
 
         </div>
         <div id="addVerseContainer" class="animated">
 
+            <input type="text" id="addRef" placeholder="Reference" class="input-field" value="" onkeypress="">
+
             <input type="text" id="addVerse" placeholder="Add New Verse" class="input-field" value="" onkeypress="">
 
-            <input type="button" value="Go" id="triggerVerseAdd" class="waves-effect waves-light btn blue-grey lighten-3" onclick="changeVerse();">
+            <input type="button" value="Go" id="triggerVerseAdd" class="waves-effect waves-light btn blue-grey lighten-3" onclick="changeVerse(); remVerse();">
+
+            <input type="button" value="add" id="addHist" class="waves-effect waves-light btn blue-grey lighten-3" onclick="remVerse();">
+            
+            
+            <ul id="historyList">
+            
+                
+            
+            </ul>
+            
+            
 
         </div>
 

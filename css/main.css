@@ -1,5 +1,6 @@
 #next,
-#triggerVerseAdd {
+#triggerVerseAdd,
+#addHist {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -7,13 +8,28 @@
 }
 
 #mainInput,
-#addVerse {
+#addVerse,
+#addRef {
     box-shadow: 0px 0px 8px #888888;
     border-radius: 4px;
     font-size: 20px;
     width: 96%;
     padding-right: 2%;
     padding-left: 2%;
+}
+
+#mainInput:hover,
+#addVerse:hover,
+#addRef:hover {
+    box-shadow: 0px 0px 12px #888888;
+
+}
+
+#mainInput:focus,
+#addVerse:focus,
+#addRef:focus {
+    box-shadow: 0px 0px 20px #888888;
+
 }
 
 #add {
@@ -59,13 +75,13 @@
 }
 
 
-#menuContainer > li{
+#menuContainer > li {
     line-height: inherit;
     padding: 15px;
 }
 
 .blurrText {
-    filter: blur(15px);
+    filter: blur(25px);
     transition-duration: .2s;
 }
 
@@ -74,8 +90,44 @@
     transition-duration: .1s;
 }
 
-#dificultyButton{
+#dificultyButton {
     margin: 0px;
     padding: 0px;
+
+}
+
+#historyList h1 {
+    font-size: 30px;
+    margin: 0px;
+    text-decoration: underline;
+}
+
+#historyList p {
+    font-size: 20px;
+
+}
+
+#historyList i {
+    cursor: pointer;
+
+}
+
+#historyList li {
+    box-shadow: 0px 0px 8px #888888;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 15px;
+    transition-duration: .2s;
+
+}
+
+#historyList li:hover{
+    box-shadow: 0px 0px 15px #888888;
+    transition-duration: .5s;
     
+}
+
+#historyList .spanText {
+    cursor: pointer;
+
 }
