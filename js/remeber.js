@@ -2,7 +2,7 @@ var verses = [];
 
 
 //updates verses to cookies cookies
-if(typeof localStorage.verses !== 'undefined'){    
+if (typeof localStorage.verses !== 'undefined') {
     verses = JSON.parse(localStorage.verses);
 
 }
@@ -19,18 +19,50 @@ var appendIt = function (x) {
     document.getElementById("historyList").lastChild.innerHTML = x
 };
 
-
+//adds stuff to array
 var remVerse = function () {
     var objects = new Object()
 
     var stNum = verses.length;
 
     objects.ref = document.getElementById("addRef").value;
-    objects.stVerse = document.getElementById("addVerse").value;
 
-    verses.unshift(objects);
-    updateCook();
+    var addVerse = document.getElementById("addVerse").value;
+
+    objects.stVerse = addVerse;
+
+    var already = true;
     
+    var ii = 0;
+    
+    
+    while (ii < verses.length) {
+        
+        if (verses[ii].stVerse == addVerse) {
+            already = true;
+            
+            ii = verses.length + 5;
+            
+            console.log("true");
+
+        } else {
+            already = false;
+            console.log("false");
+        }
+        
+        ii++;
+
+    }
+
+    //console.log(already);
+    
+    if (already == false) {
+        verses.unshift(objects);
+
+
+    }
+    updateCook();
+
     update();
 
 };
@@ -47,7 +79,7 @@ var deleteList = function (idElem) {
 
 
     verses.splice(numId, 1);
-    
+
     updateCook();
 
     update();

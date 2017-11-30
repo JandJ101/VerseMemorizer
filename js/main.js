@@ -92,8 +92,12 @@ var nextSet = function () {
 
     unBlurrTextType();
 
-    if (document.getElementById("mainInput").value.replace(/\s/g, '').toLowerCase() == document.getElementById("mainText").innerHTML.replace(/\s/g, '').toLowerCase()) {
-
+    //strip punctuation and spaces when checking
+    
+    //if (document.getElementById("mainInput").value.replace(/\s/g, '').toLowerCase() == document.getElementById("mainText").innerHTML.replace(/\s/g, '').toLowerCase())
+    
+    if (document.getElementById("mainInput").value.replace(/[^A-Z0-9]/ig, "").toLowerCase() == document.getElementById("mainText").innerHTML.replace(/[^A-Z0-9]/ig, "").toLowerCase()) {
+        
         if (setState >= colectedWords.length) {
             setState = 0;
             document.getElementById("mainText").innerHTML = colectedWords[setState];
