@@ -21,6 +21,7 @@ var appendIt = function (x) {
 
 //adds stuff to array
 var remVerse = function () {
+
     var objects = new Object()
 
     var stNum = verses.length;
@@ -32,31 +33,31 @@ var remVerse = function () {
     objects.stVerse = addVerse;
 
     var already = true;
-    
+
     var ii = 0;
-    
-    
+
+
     while (ii < verses.length) {
-        
+
         if (verses[ii].stVerse == addVerse) {
             already = true;
-            
+
             ii = verses.length + 5;
-            
+
             console.log("true");
 
         } else {
             already = false;
             console.log("false");
         }
-        
+
         ii++;
 
     }
 
     //console.log(already);
-    
-    if (already == false) {
+
+    if (already == false && document.getElementById("addVerse").value !== "") {
         verses.unshift(objects);
 
 

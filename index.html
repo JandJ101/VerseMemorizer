@@ -7,10 +7,12 @@
     <script src="js/addVerse.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/remeber.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/main.css" />
     <link type="text/css" rel="stylesheet" href="css/animate.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -83,20 +85,25 @@
         </div>
         <div id="addVerseContainer" class="animated">
 
-            <input type="text" id="addRef" placeholder="Reference" class="input-field" value="" onkeypress="">
+            <h1 class="labelIn grey-text text-lighten-1">Reference:</h1>
 
-            <input type="text" id="addVerse" placeholder="Add New Verse" class="input-field" value="" onkeypress="">
+            <input type="text" id="addRef" placeholder="" class="input-field" value="" onkeypress="">
+
+
+            <h1 class="labelIn grey-text text-lighten-1">Verse:</h1>
+            <input type="text" id="addVerse" placeholder="" class="" value="" onkeypress="">
+
 
             <input type="button" value="Go" id="triggerVerseAdd" class="waves-effect waves-light btn blue-grey lighten-3" onclick="changeVerse(); remVerse();">
-            
-            
+
+
             <ul id="historyList">
-            
-                
-            
+
+
+
             </ul>
-            
-            
+
+
 
         </div>
 

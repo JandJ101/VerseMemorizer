@@ -1,3 +1,6 @@
+//my sisters variable that she made because she wnated to know how too declare variables.
+var profesionalBoss = "me myself and i";
+
 var verse = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit";
 
 var splitVerse = verse.split(" ");

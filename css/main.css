@@ -1,3 +1,7 @@
+body {
+    overflow-y: scroll
+}
+
 #next,
 #triggerVerseAdd,
 #addHist {
@@ -21,16 +25,30 @@
 #mainInput:hover,
 #addVerse:hover,
 #addRef:hover {
-    box-shadow: 0px 0px 12px #888888;
+    box-shadow: 0px 2px 15px #888888;
 
 }
+
 
 #mainInput:focus,
 #addVerse:focus,
 #addRef:focus {
-    box-shadow: 0px 0px 20px #888888;
+    border-bottom: 1px solid #888;
+    box-shadow: 0px 8px 25px #888888;
+}
+
+#addVerseContainer label[for=addVerse]:focus + label {
+    color: #000;
+}
+
+
+.labelIn {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 0px;
 
 }
+
 
 #add {
     position: fixed;
@@ -121,13 +139,23 @@
 
 }
 
-#historyList li:hover{
-    box-shadow: 0px 0px 15px #888888;
+#historyList li:hover {
+    box-shadow: 0px 3px 15px #888888;
     transition-duration: .5s;
-    
+
 }
 
 #historyList .spanText {
     cursor: pointer;
 
+}
+
+
+.input-field label {
+    padding-left: 10px;
+}
+
+.input-field .active {
+    margin-bottom: 25px;
+    height: 110%;
 }
