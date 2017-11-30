@@ -22,49 +22,50 @@ var appendIt = function (x) {
 //adds stuff to array
 var remVerse = function () {
 
-    var objects = new Object()
+    if (document.getElementById("addVerse").value !== "") {
 
-    var stNum = verses.length;
+        var objects = new Object()
 
-    objects.ref = document.getElementById("addRef").value;
+        var stNum = verses.length;
 
-    var addVerse = document.getElementById("addVerse").value;
+        objects.ref = document.getElementById("addRef").value;
 
-    objects.stVerse = addVerse;
+        var addVerse = document.getElementById("addVerse").value;
 
-    var already = true;
+        objects.stVerse = addVerse;
 
-    var ii = 0;
+        var already = false;
+
+        var ii = 0;
 
 
-    while (ii < verses.length) {
+        while (ii < verses.length) {
 
-        if (verses[ii].stVerse == addVerse) {
-            already = true;
+            if (verses[ii].stVerse == addVerse) {
+                already = true;
+                //
+                ii = verses.length + 5;
+            } else {
+                already = false;
 
-            ii = verses.length + 5;
+            }
 
-            console.log("true");
+            ii++;
 
-        } else {
-            already = false;
-            console.log("false");
         }
 
-        ii++;
+        //console.log(already);
+
+        if (already == false) {
+            verses.unshift(objects);
+
+
+        }
+        updateCook();
+
+        update();
 
     }
-
-    //console.log(already);
-
-    if (already == false && document.getElementById("addVerse").value !== "") {
-        verses.unshift(objects);
-
-
-    }
-    updateCook();
-
-    update();
 
 };
 
