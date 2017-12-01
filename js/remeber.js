@@ -69,7 +69,7 @@ var remVerse = function () {
 
 };
 
-
+//deletes li on user request
 var deleteList = function (idElem) {
     var theElement = idElem.parentElement;
 
@@ -85,7 +85,56 @@ var deleteList = function (idElem) {
     updateCook();
 
     update();
+};
 
+
+
+//apply edits
+var applyEdits = function (x) {
+    var theId = x.parentElement.id;
+    var newH1Text = $("#" + theId + " .newH1Text")[0].value;
+    var newPText = $("#" + theId + " .newPText")[0].value;
+
+    console.log(newH1Text);
+    console.log(newPText);
+
+    var numId = parseInt(theId.charAt(0));
+
+    verses[numId].ref = newH1Text;
+    verses[numId].stVerse = newPText;
+
+    updateCook();
+    update();
+
+
+};
+
+
+
+//edits stored verses
+var editList = function (x) {
+
+
+    var theId = x.parentElement.id;
+
+    h1Text = $("#" + theId + " .theH1")[0].innerHTML;
+
+    pText = $("#" + theId + " .theP")[0].innerHTML;
+
+    //disbles enter verse
+    $("#" + theId + " .spanText")[0].onclick = null;
+
+    console.log(h1Text);
+
+    x.innerHTML = "check";
+
+    x.onclick = function () {
+        applyEdits(this);
+    };
+
+    $("#" + theId + " .theH1").replaceWith("<input type='text' class='newH1Text' value='" + h1Text + "'>");
+
+    $("#" + theId + " .theP").replaceWith("<textarea class='newPText materialize-textarea'>" + pText + "</textarea>");
 
 
 };
@@ -106,7 +155,9 @@ var update = function () {
 
         var deleteButton = "<i onclick='deleteList(this);' class='material-icons'>delete</i>";
 
-        var goods = "<span onclick='enterVerse(this);' class='spanText'>" + h1 + p + "</span>" + deleteButton;
+        var editButton = "<i onclick='editList(this);' class='material-icons'>edit</i>"
+
+        var goods = "<span onclick='enterVerse(this);' class='spanText'>" + h1 + p + "</span>" + deleteButton + editButton;
 
 
         //makes appension
