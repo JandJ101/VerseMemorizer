@@ -93,7 +93,7 @@ var deleteList = function (idElem) {
 var applyEdits = function (x) {
     var theId = x.parentElement.id;
     var newH1Text = $("#" + theId + " .newH1Text")[0].value;
-    var newPText = $("#" + theId + " .newPText")[0].value;
+    var newPText = $("#" + theId + " .newPText")[0].value.replace(/\n/g, '');
 
     console.log(newH1Text);
     console.log(newPText);
