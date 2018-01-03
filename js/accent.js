@@ -3,7 +3,7 @@ var lastLetter;
 var focusedTextBox;
 
 
-var replaceLast2 = function (str1, replace, str2) {
+var replaceLast2 = function (str1, replace, str2, pos) {
 
 
     var output;
@@ -69,6 +69,9 @@ var replaceLast2 = function (str1, replace, str2) {
 
     focusedTextBox.value = str1 + output + str2;
 
+    focusedTextBox.selectionStart = pos - 1;
+    focusedTextBox.selectionEnd = pos - 1;
+
 
 };
 
@@ -123,7 +126,7 @@ var checkAccent = function () {
             var trim2 = firstPart.slice(0, -1).slice(0, -1);
 
 
-            replaceLast2(trim2, letter, secondPart);
+            replaceLast2(trim2, letter, secondPart, cursorPos);
 
 
         };
