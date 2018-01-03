@@ -157,7 +157,7 @@ var update = function () {
 
         var editButton = "<i onclick='editList(this);' class='material-icons'>edit</i>"
 
-        var goods = "<span onclick='enterVerse(this);' class='spanText'>" + h1 + p + "</span>" + deleteButton + editButton;
+        var goods = "<div onclick='enterVerse(this);' class='spanText'>" + h1 + p + "</div>" + deleteButton + editButton;
 
 
         //makes appension
