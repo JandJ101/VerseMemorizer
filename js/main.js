@@ -179,5 +179,6 @@ window.onload = function () {
 
     document.getElementById("dificultyButton").innerHTML = dificulty;
     document.getElementById("PosButton").innerHTML = refPos;
+    $("#blurrText")[0].checked = true;
 
 };
