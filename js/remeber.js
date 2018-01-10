@@ -54,7 +54,6 @@ var remVerse = function () {
 
         }
 
-        //console.log(already);
 
         if (already == false) {
             verses.unshift(objects);
@@ -95,8 +94,6 @@ var applyEdits = function (x) {
     var newH1Text = $("#" + theId + " .newH1Text")[0].value;
     var newPText = $("#" + theId + " .newPText")[0].value.replace(/\n/g, '');
 
-    console.log(newH1Text);
-    console.log(newPText);
 
     var numId = parseInt(theId.charAt(0));
 
@@ -123,8 +120,6 @@ var editList = function (x) {
 
     //disbles enter verse
     $("#" + theId + " .spanText")[0].onclick = null;
-
-    console.log(h1Text);
 
     x.innerHTML = "check";
 

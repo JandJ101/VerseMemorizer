@@ -69,7 +69,7 @@
             <li>
 
 
-                <label for="difdrop">Words Per Section</label><br>
+                <label for="difdrop">Separate By</label><br>
                 <!-- Dropdown Trigger -->
                 <a class='dropdown-button btn waves-effect waves-light' id="dificultyButton" href='#' data-activates='dropdown1'>?</a>
 
@@ -79,6 +79,26 @@
                     <li><a onclick="setDificulty(2);">2</a></li>
                     <li><a onclick="setDificulty(3);">3</a></li>
                     <li><a onclick="setDificulty(4);">4</a></li>
+                    <li><a onclick="setDificulty('commas');">Commas</a></li>
+                    <li><a onclick="setDificulty('all');">All</a></li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+
+
+                <label for="difdrop">Reference Position</label><br>
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-button btn waves-effect waves-light' id="PosButton" href='#' data-activates='dropdown2'>?</a>
+
+                <!-- Dropdown Structure -->
+                <ul id='dropdown2' name="posdrop" class='dropdown-content'>
+                    <li><a onclick="refPosChange('after');">After</a></li>
+                    <li><a onclick="refPosChange('before');">Before</a></li>
+                    <li><a onclick="refPosChange('none');">None</a></li>
 
                 </ul>
 

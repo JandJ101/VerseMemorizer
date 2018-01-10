@@ -102,22 +102,16 @@ var checkAccent = function () {
 
         secondPart = fullString.slice(cursorPos, fullString.length);
 
-        console.log(cursorPos);
-
-        console.log(firstPart + "||" + secondPart);
-
         if (document.activeElement.type == "text" || document.activeElement.tagName == "TEXTAREA") {
 
             //gets last letter of active text box
             lastLetter = firstPart.slice(-1);
-            //console.log(lastLetter);
         }
 
 
         if (lastLetter == "`" || lastLetter == "~") {
             var secondLast = firstPart.charAt(firstPart.length - 2);
 
-            //console.log(secondLast);
         }
 
 

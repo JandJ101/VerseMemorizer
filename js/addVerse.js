@@ -3,7 +3,8 @@ var changeVerse = function () {
     if (document.getElementById("addVerse").value !== "") {
         verse = document.getElementById("addVerse").value;
         reference = document.getElementById("addRef").value;
-        splitVerse = verse.split(" ");
+
+        splitVerse = verse.split(splitType);
 
         makeArrayLooper();
         setState = 0;

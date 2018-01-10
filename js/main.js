@@ -57,7 +57,17 @@ var makeArrayLooper = function () {
     }
 
     if (reference !== "") {
-        colectedWords.push(reference);
+
+        if (refPos == "after") {
+            colectedWords.push(reference);
+        } else if (refPos == "before") {
+            colectedWords.unshift(reference);
+
+        } else {
+            //none
+
+        }
+
     }
 
 }
@@ -168,5 +178,6 @@ window.onload = function () {
 
 
     document.getElementById("dificultyButton").innerHTML = dificulty;
+    document.getElementById("PosButton").innerHTML = refPos;
 
 };

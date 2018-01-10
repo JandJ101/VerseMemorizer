@@ -88,7 +88,6 @@ body {
 
 #slide-out label {
     font-size: 20px;
-    margin: 10px;
 
 }
 
@@ -108,7 +107,8 @@ body {
     transition-duration: .1s;
 }
 
-#dificultyButton {
+#dificultyButton,
+#PosButton {
     margin: 0px;
     padding: 0px;
 
@@ -122,6 +122,9 @@ body {
 
 #historyList p {
     font-size: 20px;
+    margin: 0px;
+    padding-top: 18px;
+    margin-bottom: 10px;
 
 }
 
