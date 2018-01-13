@@ -1,4 +1,4 @@
 # VerseMemorizer
 
 # view at:
-[bit.ly/versememorizer](bit.ly/versememorizer)
+[bit.ly/versememorizer](https://bit.ly/versememorizer)
