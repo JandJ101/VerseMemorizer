@@ -17,7 +17,7 @@ var setDificulty = function (a) {
     if (a == "all") {
         splitType = " ";
         dificulty = splitVerse.length;
-    } else if (a == "commas") {
+    } else if (a == "punctuation") {
         splitType = ",";
         dificulty = 1;
     } else {

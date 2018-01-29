@@ -4,7 +4,20 @@ var changeVerse = function () {
         verse = document.getElementById("addVerse").value;
         reference = document.getElementById("addRef").value;
 
-        splitVerse = verse.split(splitType);
+        if (splitType == ",") {
+            splitVerse = verse.split(/[,;.]+/);
+        } else {
+            splitVerse = verse.split(" ");
+        };
+
+        for (var i = 0; i < splitVerse.length; i++) {
+            if (splitVerse[i] == "") {
+                splitVerse.splice(i, 1);
+
+            }
+        }
+
+
 
         makeArrayLooper();
         setState = 0;
@@ -52,5 +65,7 @@ var changeUI = function () {
     //hide menu button
     document.getElementById("menuButton").classList.remove("fadeInLeft");
     document.getElementById("menuButton").classList.add("fadeOutLeft");
+
+    unBlurrTextType();
 
 };
