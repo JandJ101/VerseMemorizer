@@ -162,3 +162,13 @@ body {
     margin-bottom: 25px;
     height: 110%;
 }
+
+#translatedText {
+	background-color: #e8eced;
+    bottom: 0px;
+    padding: 0px;
+    border-radius: 8px;
+	font-style: italic;
+	color: #63686b;
+	font-weight: 300;
+}

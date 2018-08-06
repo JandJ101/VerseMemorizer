@@ -8,6 +8,7 @@
     <script src="js/menu.js"></script>
     <script src="js/remeber.js"></script>
     <script src="js/accent.js"></script>
+	<script src="js/translater.js"></script>
 
     <link type="text/css" rel="stylesheet" href="css/main.css" />
 
@@ -103,6 +104,20 @@
                 </ul>
 
             </li>
+			<li>
+			<div class="switch">
+
+                    <label for="realtime" onclick="">Real Time Translation</label><br>
+
+                    <label onclick="enableTranslation();">
+      Off    
+<input id="realtime" type="checkbox">
+      <span class="lever"></span>
+      On
+    </label>
+                </div>
+			</li>
+
 
         </div>
     </ul>
@@ -124,6 +139,16 @@
             <input type="text" id="mainInput" class="input-field col s12 animated" value="" onkeypress="blurrTextType();">
 
             <input type="button" value="next" id="next" class="waves-effect waves-light btn blue-grey lighten-3" onclick="nextSet();">
+			
+			<div id="translationWrapper" class="hide">
+			
+				<div id="translationLoader" class="blue-grey">
+      	<div class="indeterminate"></div>
+  		</div>
+			<h4 id="translatedText" style="" class="">
+				
+			</h4>
+			</div>
 
         </div>
         <div id="addVerseContainer" class="animated">
@@ -153,6 +178,8 @@
         <a class="btn-floating btn-large waves-effect waves-light blue-grey lighten-3 animated hide" id="add" title="Edit" onclick="changeUI();"><i class="material-icons">edit</i></a>
 
     </div>
+	
+	
 </body>
 
 </html>
