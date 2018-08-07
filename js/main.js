@@ -168,8 +168,9 @@ var nextSet = function() {
   }
 };
 
-window.onload = function() {
-  update();
+
+$( document ).ready(function() {
+    update();
 
   makeArrayLooper();
   document.getElementById("mainText").innerHTML = colectedWords[setState];
@@ -190,9 +191,14 @@ window.onload = function() {
   $("#mainInput").keydown(function() {
     blurrTextType();
   });
+	
 
+	//sets menu settings
   document.getElementById("dificultyButton").innerHTML = dificulty;
   document.getElementById("PosButton").innerHTML = refPos;
   $("#blurrText")[0].checked = true;
   $("#realtime")[0].checked = false;
-};
+	
+	
+	
+});

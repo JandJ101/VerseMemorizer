@@ -2,6 +2,11 @@ body {
     overflow-y: scroll
 }
 
+input{
+	outline: none;
+	
+}
+
 #next,
 #triggerVerseAdd,
 #addHist {
@@ -171,4 +176,15 @@ body {
 	font-style: italic;
 	color: #63686b;
 	font-weight: 300;
+	box-shadow: inset 0px 0px 10px hsl(192, 12%, 80%);
+    padding: 10px;
+}
+
+#safariWarning {
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(53, 57, 59, 0.9);
+    z-index: 7;
+	padding: 15px;
 }

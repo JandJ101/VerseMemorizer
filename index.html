@@ -3,6 +3,7 @@
 
 <head>
     <script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/platform.js"></script>
     <script src="js/main.js"></script>
     <script src="js/addVerse.js"></script>
     <script src="js/menu.js"></script>
@@ -43,7 +44,12 @@
 
 <body onkeypress="checkAccent();">
 
+	
+	<div id="safariWarning" class="hide"><h1 style="color: white;">The Safari browser doesnt work to well with this app. Try Firefox or Google Chrome.</h1><i class="waves-effect waves-light btn blue-grey lighten-3 waves-input-wrapper" style="padding: 10;"><input type="button" value="Continue Anyway" id="" class="waves-button-input" onclick="this.parentElement.parentElement.classList.add('hide');"></i></div>
 
+	<script>if(platform.name == "Safari"){
+		$("#safariWarning")[0].classList.remove("hide");
+	}</script>
 
     <ul id="slide-out" class="side-nav">
         <div id="menuContainer" class="container">
@@ -53,7 +59,7 @@
             </li>
 
             <li>
-                <div class="switch">
+                <div class="switch ">
 
                     <label for="blurrText" onclick="unBlurrTextType();">Blur Text</label><br>
 

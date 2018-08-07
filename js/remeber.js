@@ -20,7 +20,7 @@ var appendIt = function (x) {
 };
 
 //adds stuff to array
-var remVerse = function () {
+var remVerse = function() {
 
     if (document.getElementById("addVerse").value !== "") {
 
