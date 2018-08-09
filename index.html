@@ -45,9 +45,9 @@
 <body onkeypress="checkAccent();">
 
 	
-	<div id="safariWarning" class="hide"><h1 style="color: white;">The Safari browser doesnt work to well with this app. Try Firefox or Google Chrome.</h1><i class="waves-effect waves-light btn blue-grey lighten-3 waves-input-wrapper" style="padding: 10;"><input type="button" value="Continue Anyway" id="" class="waves-button-input" onclick="this.parentElement.parentElement.classList.add('hide');"></i></div>
+	<div id="safariWarning" class="hide"><h1 style="color: white;">The Safari browser doesn't work well with this app. Try Firefox or Google Chrome.</h1><i class="waves-effect waves-light btn blue-grey lighten-3 waves-input-wrapper" style="padding: 10;"><input type="button" value="Continue Anyway" id="" class="waves-button-input" onclick="this.parentElement.parentElement.classList.add('hide');"></i></div>
 
-	<script>if(platform.name == "Safari"){
+	<script>if(platform.name == "Safari" && platform.product != 'iPad' && platform.product != 'iPhone'){
 		$("#safariWarning")[0].classList.remove("hide");
 	}</script>
 
