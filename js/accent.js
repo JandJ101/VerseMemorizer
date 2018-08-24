@@ -4,56 +4,53 @@ var focusedTextBox;
 
 
 var replaceLast2 = function (str1, replace, str2, pos) {
-
-
     var output;
-
 
     //lowercase
     if (replace == "a") {
-        output = ("à");
+        output = ("á");
 
     }
 
     if (replace == "e") {
-        output = ("è");
+        output = ("é");
 
     }
 
     if (replace == "i") {
-        output = ("ì");
+        output = ("í");
 
     }
     if (replace == "o") {
-        output = ("ò");
+        output = ("ó");
 
     }
     if (replace == "u") {
-        output = ("ù");
+        output = ("ú");
 
     }
 
     //uppercase
     if (replace == "A") {
-        output = ("À");
+        output = ("Á");
 
     }
 
     if (replace == "E") {
-        output = ("È");
+        output = ("É");
 
     }
 
     if (replace == "I") {
-        output = ("Ì");
+        output = ("Í");
 
     }
     if (replace == "O") {
-        output = ("Ò");
+        output = ("Ó");
 
     }
     if (replace == "U") {
-        output = ("Ù");
+        output = ("Ú");
 
     }
 
