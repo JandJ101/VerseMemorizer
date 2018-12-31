@@ -45,7 +45,7 @@ var translateAndReset = function(x) {
 
 //puts everything back in a new translated array
 var putBack = function(x) {
-  var y = x.text;
+  var y = x.translation;
 
   finalTranslation = y.split("|||");
   translationReady();
@@ -64,7 +64,7 @@ var getTranslation = function(thingtotranslate) {
   };*/
 
   $.get(
-    "https://jandjtranslate-xx9cj4as3uha.runkit.sh/en/" + thingtotranslate,
+    "https://untitled-uoagm597h8g1.runkit.sh/en/" + thingtotranslate,
     undefined,
     function(data, status, xhr) {
       putBack(data);
